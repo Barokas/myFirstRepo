@@ -6,7 +6,7 @@ function main() {
     // Initialize the eyes SDK and set your private API key.
     var Eyes = require('eyes.selenium').Eyes;
     var eyes = new Eyes();
-    eyes.setApiKey("ltY8nZLL7WH10809aiet3jzzD105rHyX110wrppAhBAUmnoFk110");
+
 
 
     try {
