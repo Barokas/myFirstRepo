@@ -15,7 +15,7 @@ function main() {
         eyes.open(driver, 'Applitools website', 'TestResults', {width: 1200, height: 817});
 
         // Navigate the browser to the "hello world!" web-site.
-        driver.get('https://applitools.com/');
+        driver.get('https://google.com/');
 
         // Visual checkpoint #1.
         eyes.checkWindow('Main Page');
