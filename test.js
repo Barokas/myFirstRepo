@@ -24,7 +24,7 @@ var driver = new webdriver.Builder().
     try {
 
         // Start the test and set the browser's viewport size to 800x600.
-        eyes.open(driver, 'Applitools website', 'TestResults', {width: 1200, height: 817});
+        eyes.open(driver, 'Applitools website', 'TestResults', {width: 800, height: 600});
 
         // Navigate the browser to the "hello world!" web-site.
         driver.get('https://applitools.com/');
