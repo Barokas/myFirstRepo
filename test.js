@@ -1,12 +1,25 @@
 function main() {
     var webdriver = require('selenium-webdriver');
 
-    var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+    // var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+
+
+var driver = new webdriver.Builder().
+  withCapabilities({
+    'browserName': 'chrome',
+    'platform': 'Windows 10',
+    'version': '59.0',
+    'username': process.env.SAUCE_USER,
+    'accessKey': process.env.SAUCE_LICEANSE
+  }).
+  usingServer("http://" + process.env.SAUCE_USER + ":" + process.env.SAUCE_LICEANSE +
+              "@ondemand.saucelabs.com:80/wd/hub").
+  build();
 
     // Initialize the eyes SDK and set your private API key.
     var Eyes = require('eyes.selenium').Eyes;
     var eyes = new Eyes();
-
+    // eyes.setApiKey("ltY8nZLL7WH10809aiet3jzzD105rHyX110wrppAhBAUmnoFk110");
 
 
     try {
