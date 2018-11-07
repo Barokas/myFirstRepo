@@ -35,16 +35,7 @@ var driver = new webdriver.Builder().
         // End the test.
         eyes.close(false).then(function(results) {console.log(results);});
         
-        eyes.open(driver, 'Applitools website', 'test 2', {width: 800, height: 600});
 
-        // Navigate the browser to the "hello world!" web-site.
-        driver.get('https://applitools.com/');
-
-        // Visual checkpoint #1.
-        eyes.checkWindow('Main Page');
-
-        // End the test.
-        eyes.close(false).then(function(results) {console.log(results);});
 
         
 
