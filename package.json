@@ -1,6 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
+  "private": true,
   "description": "try2",
   "main": "index.js",
   "scripts": {
