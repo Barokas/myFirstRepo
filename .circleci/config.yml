@@ -46,8 +46,8 @@ jobs:
         
       # run tests!
       - run: |
-      export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
-      yarn test
+        export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
+        yarn test
       
 
 
