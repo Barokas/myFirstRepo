@@ -28,7 +28,7 @@ jobs:
 
 
       - run: echo $CIRCLE_SHA1
-      - run: export APPLITOOLS_BATCH_ID= "echo $CIRCLE_SHA1"
+      - run: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
       - run: printenv
       - run: yarn install
       
