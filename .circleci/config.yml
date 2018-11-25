@@ -28,7 +28,7 @@ jobs:
 
 
       - run: echo $CIRCLE_SHA1
-      - run echo $CIRCLE_SHA1 >> $APPLITOOLS_BATCH_ID
+      - run echo 'export APPLITOOLS_BATCH_ID=$CIRCLE_SHA1’ >> $BASH_ENV
 #      - run: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
 #      -run: APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
 #      - run:  export APPLITOOLS_BATCH_ID = `$CIRCLE_SHA1`
