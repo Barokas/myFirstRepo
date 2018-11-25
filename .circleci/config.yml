@@ -27,15 +27,17 @@ jobs:
           - v1-dependencies-
 
 
-      - run: echo $CIRCLE_SHA1
-      - run: "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`"
+#      - run: echo $CIRCLE_SHA1
+#      - run: "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`"
 #      - run: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
 #      -run: APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
 #      - run:  export APPLITOOLS_BATCH_ID = `$CIRCLE_SHA1`
 
-      - run: echo $APPLITOOLS_BATCH_ID
-      - run: printenv
-      - run: yarn install
+#      - run: echo $APPLITOOLS_BATCH_ID
+#      - run: printenv
+      - run: |
+        yarn install
+        export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
       
 
       - save_cache:
