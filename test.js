@@ -27,7 +27,7 @@ var driver = new webdriver.Builder().
         eyes.open(driver, 'Applitools website', 'TestResults', {width: 800, height: 600});
 
         // Navigate the browser to the "hello world!" web-site.
-        driver.get('https://google.com/');
+        driver.get('https://yahoo.com/');
 
         // Visual checkpoint #1.
         eyes.checkWindow('Main Page');
