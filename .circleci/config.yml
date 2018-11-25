@@ -27,7 +27,7 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
-      - run: "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`"
+             "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`"
 
       - save_cache:
           paths:
