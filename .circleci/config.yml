@@ -35,9 +35,8 @@ jobs:
 
 #      - run: echo $APPLITOOLS_BATCH_ID
 #      - run: printenv
-      - run: |
-        yarn install
-        export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
+      - run: yarn install
+
       
 
       - save_cache:
@@ -46,6 +45,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+      - run: |
+      export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
+      yarn test
+      
 
 
