@@ -21,10 +21,10 @@ jobs:
 
       # Download and cache dependencies
       - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
 
 
 #      - run: echo $CIRCLE_SHA1
@@ -40,14 +40,14 @@ jobs:
       
 
       - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
       - run: |
-          export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
-          yarn test
+        export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` 
+        yarn test
       
 
 
